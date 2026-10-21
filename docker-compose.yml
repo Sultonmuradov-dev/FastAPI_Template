@@ -1,0 +1,27 @@
+version: "v5.6.0"
+
+
+services:
+  database:
+    image: postgres:alpine
+    container_name: db
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 1
+    ports:
+      - "5433:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+  fast_api:
+    build: .
+    image: fast_api_test:alpine
+    container_name: fast_test
+    restart: always
+    depends_on:
+      - database
+
+
+
+volumes:
+  pg_data:

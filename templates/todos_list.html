@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do Ro'yxati</title>
+</head>
+<body>
+    <h1>Vazifalar Ro'yxati</h1>
+    <ul>
+    {% for todo in todos %}
+        <li><strong>[{{ todo.id }}]</strong> {{ todo.title }} - {% if todo.completed %}Bajarilgan{% else %}Kutilmoqda{% endif %}</li>
+    {% else %}
+        <li>Hozircha vazifalar yo'q.</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vazifani Tahrirlash</title>
+</head>
+<body>
+    <h1>Vazifani Tahrirlash / Yangilash</h1>
+    <form action="/todos/update" method="post">
+        <div>
+            <label>Vazifa ID si:</label>
+            <input type="number" name="id" required>
+        </div>
+        <br>
+        <div>
+            <label>Yangi sarlavha (ixtiyoriy):</label>
+            <input type="text" name="title">
+        </div>
+        <br>
+        <div>
+            <label>Bajarildimi?</label>
+            <select name="completed">
+                <option value="false">Yo'q (Kutilmoqda)</option>
+                <option value="true">Ha (Bajarildi)</option>
+            </select>
+        </div>
+        <br>
+        <button type="submit">Saqlash</button>
+    </form>
+</body>
+</html>
